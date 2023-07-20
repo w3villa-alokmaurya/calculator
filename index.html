@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body>
-    <div class="container">
+<body class="light-theme" id="mainbody">
+    <div class="dark-btn">
+        <button onclick="dark()" class="d-btn" id="dark-btn"><i class="fa-solid fa-circle-half-stroke"></i>Dark</button>
+        <button onclick="light()" id="light-btn" class="d-btn-light"><i class="fa-solid fa-circle-half-stroke"></i>Light</button>
+    </div>
+    <div class="container " id="main">
+        
         <div class="calculator-box">
             <div class="input-calc">
                 <input type="text" id="input-value" value="0" disabled>
@@ -43,6 +48,8 @@
 
         </div>
     </div>
+
+    <script src="calc.js"></script>
     
 </body>
 </html>

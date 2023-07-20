@@ -82,3 +82,29 @@ button:hover{
 .mr-0{
     margin-right: 0;
 }
+.dark-theme{
+    background-color: black!important;
+    color: white!important;
+    
+}
+.dark-btn{
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    
+}
+.d-btn-light{
+    display: none;
+}
+.dark-btn button{
+    /* background:transparent!important;
+    background-color: transparent!important; */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.dark-btn button:hover{
+    background-color: black!important;
+    color: white;
+    
+}
