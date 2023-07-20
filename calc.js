@@ -27,9 +27,11 @@ let calculator = document.getElementsByClassName('calculator-box');
 let keys = document.getElementById('calc');
 
 
-   keys.addEventListener('click', e => function() {
+   keys.addEventListener('click', e => {
     if(e.target.matches('button')){
-        console.log("button");
+        if(!action){
+            console.log("number pressed");
+        }
     }
     
     
