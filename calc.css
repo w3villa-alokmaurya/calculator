@@ -11,14 +11,17 @@ body{
 }
 @media screen and (max-width:450px) {
     .calculator-box{
-        width: 300px!important;
-        height: 570px;
+        width: 340px!important;
+        height: 505px;
+    }
+    .container{
+        margin-top: 0!important;
     }
     #input-value{
-        width: 250px!important;
+        width: 290px!important;
     }
     button{
-        width: 70px!important;
+        width: 84px!important;
     }
 
     
@@ -34,7 +37,7 @@ body{
 
 .calculator-box{
     width: 400px;
-    height: 570px;
+    height: 505px;
     background-color: #414414;
     color: white;
     font-size: 16px;
@@ -90,10 +93,7 @@ button:hover{
     
 }
 .dark-btn{
-    text-align: right;
-    margin-top: 10px;
-    margin-right: 10px;
-    
+  margin: 10px;
 }
 .d-btn-light{
     display: none;
@@ -101,9 +101,9 @@ button:hover{
 .dark-btn button{
     /* background:transparent!important;
     background-color: transparent!important; */
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
 }
 .dark-btn button:hover{
     background-color: black!important;

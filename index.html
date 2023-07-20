@@ -15,33 +15,33 @@
     </div>
     <div class="container " id="main">
         
-        <div class="calculator-box">
+        <div class="calculator-box" data-previousKeytype="">
             <div class="input-calc">
                 <input type="text" id="input-value" value="0" disabled>
             </div>
 
-            <div class="buttons-container" id="calc">
-                    <button class="cancel-btn" data-action = "addition"><i class="fa-solid fa-arrow-left"></i></button>
-                    <button class="operator-btn" data-action = "addition">AC</button>
+            <div class="buttons-container" id="calc" >
+                
+                    <button class="cancel-btn" data-action = "cancel"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="operator-btn" data-action = "ac">AC</button>
                     <button class="operator-btn mr-0" data-action = "addition">+</button>
                     <button class="operator-btn">0</button>
                     <button class="operator-btn">1</button>
-                    <button class="operator-btn mr-0">-</button>
+                    <button class="operator-btn mr-0" data-action="substraction">-</button>
                     <button class="operator-btn">2</button>
                     <button class="operator-btn">3</button>
-                    <button class="operator-btn mr-0"><i class="fa-solid fa-divide"></i></button>
+                    <button class="operator-btn mr-0" data-action="divide">&divide;</button>
                     <button class="operator-btn">4</button>
                     <button class="operator-btn">5</button>
-                    <button class="operator-btn mr-0"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="operator-btn mr-0" data-action="multiply">&#215;</button>
                     <button class="operator-btn">6</button>
                     <button class="operator-btn">7</button>
-                    <button class="operator-btn mr-0">=</button>
+                    <button class="operator-btn mr-0" data-action="equal">=</button>
                     <button class="operator-btn">8</button>
                     <button class="operator-btn">9</button>
-                    <button class="operator-btn mr-0" data-action = "addition">%</button>
-                    <button class="operator-btn" data-action = "addition">(</button>
-                    <button class="operator-btn" data-action = "addition">)</button>
-                    <button class="operator-btn" data-action = "addition">.</button>
+                    <button class="operator-btn" data-action = "decimal">.</button>
+                    
+                    
 
             </div>
             
