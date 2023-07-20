@@ -19,3 +19,18 @@ function light(){
     // d.remove("light-theme");
     // d.add("dark-theme");
 }
+
+
+// calculator
+
+let calculator = document.getElementsByClassName('calculator-box');
+let keys = document.getElementById('calc');
+
+
+   keys.addEventListener('click', e => function() {
+    if(e.target.matches('button')){
+        console.log("button");
+    }
+    
+    
+   })

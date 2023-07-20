@@ -35,7 +35,7 @@ body{
 .calculator-box{
     width: 400px;
     height: 570px;
-    background-color: rgb(22, 20, 20);
+    background-color: #414414;
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -70,6 +70,8 @@ button{
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 15px;
+    box-shadow: rgb(147 63 163 / 89%) 0px 54px 55px, rgb(55 193 150 / 80%) 0px -12px 30px, rgb(86 234 47 / 91%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(173 12 12 / 9%) 0px -3px 5px;
+
 }
 button:hover{
     background-color: rgba(187, 184, 184, 0.647);
