@@ -25,9 +25,9 @@ function light(){
 
 let calculator = document.getElementsByClassName('calculator-box');
 let keys = document.getElementById('calc');
-let a=document.getElementById('input-value').value;
 
   let display = document.getElementById('input-value');
+  let equalpress=false;
 
 
    keys.addEventListener('click', e => {
@@ -35,6 +35,7 @@ let a=document.getElementById('input-value').value;
     const action = key.dataset.action;
     const keycontent = key.textContent;
     const displaynum = display.value;
+
 
     
     let previousKeyType;
@@ -58,8 +59,7 @@ let a=document.getElementById('input-value').value;
                 || display.value.slice(-1)=='*'){
                     
                    display.value= display.value.slice(0, -1) + keycontent;
-                    // console.log(display.value);
-                    // console.log(display.value.slice(-1)=keycontent) ;
+                  
                 }else{
                     console.log('err');
 
@@ -68,15 +68,29 @@ let a=document.getElementById('input-value').value;
  
                 
             }
+
+    if(action=='equal'){
+        equalpress=true;
+        if(display.value.slice(-1)=='+' 
+        || display.value.slice(-1)=='-' 
+        || display.value.slice(-1)=='/' 
+        || display.value.slice(-1)=='*')
+        {
+            display.value='error';
+        }else{
+            display.value = eval(displaynum);
+            
+        }
+    }
+
         
      
         if(!action){
-            // if(document.getElementsByClassName('equal-pressed')){
-            //     display.value=0;
-            // }
-            
-            if(displaynum == '0' ){
+           
+
+            if(displaynum == '0' || equalpress==true){
                 display.value = keycontent;
+                equalpress=false;
             }
             else{
                 display.value=displaynum + keycontent;
@@ -85,10 +99,6 @@ let a=document.getElementById('input-value').value;
  
         }
         if(action=='decimal'){
-            // if(document.getElementsByClassName('equal-pressed')){
-            //     display.value=0;
-            // }
-            
             if(display.value.slice(-1) == '.'){
                     
                    display.value= display.value.slice(0, -1) + keycontent;
@@ -98,24 +108,6 @@ let a=document.getElementById('input-value').value;
             }
             
         }
-
-
-    if(action=='equal'){
-        // key.classList.add('equal-pressed');
-        if(display.value.slice(-1)=='+' 
-        || display.value.slice(-1)=='-' 
-        || display.value.slice(-1)=='/' 
-        || display.value.slice(-1)=='*'){
-            display.value='error';
-        }else{
-            display.value = eval(displaynum);
-        }
-
-        
-        
-        
-    }
-
         
     }
     if(action=='ac'){
